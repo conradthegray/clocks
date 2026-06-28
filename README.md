@@ -70,6 +70,21 @@ npm run coverage
 npm run lint
 ```
 
+### Git hooks
+
+[Lefthook](https://github.com/evilmartians/lefthook) manages Git hooks and is installed as a dev dependency. After `npm install`, activate the hooks with:
+
+```sh
+npx lefthook install
+```
+
+Hooks that run automatically:
+
+| Hook         | Jobs                              |
+| ------------ | --------------------------------- |
+| `pre-commit` | `lint`, `typecheck` (in parallel) |
+| `pre-push`   | `audit`, unit tests (in sequence) |
+
 ## Project structure
 
 ```text
