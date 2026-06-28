@@ -3,12 +3,14 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { DigitalClock } from "@/components/DigitalClock";
 import { BinaryClock } from "@/components/BinaryClock";
+import { BarClock } from "@/components/BarClock";
 import type { Clock, ClockId } from "@/types";
 import "./App.css";
 
 const CLOCKS: Clock[] = [
   { id: "digital", label: "Digital" },
   { id: "binary", label: "Binary" },
+  { id: "bar", label: "Bar" },
 ];
 
 function App() {
@@ -25,6 +27,7 @@ function App() {
       <section className="grid place-content-center place-items-center px-5 py-8">
         {selectedClockId === "digital" && <DigitalClock />}
         {selectedClockId === "binary" && <BinaryClock />}
+        {selectedClockId === "bar" && <BarClock />}
       </section>
 
       <Footer />
