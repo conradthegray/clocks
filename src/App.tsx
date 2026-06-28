@@ -4,6 +4,7 @@ import { Footer } from "@/components/Footer";
 import { DigitalClock } from "@/components/DigitalClock";
 import { BinaryClock } from "@/components/BinaryClock";
 import { BarClock } from "@/components/BarClock";
+import { BarsClock } from "@/components/BarsClock";
 import type { Clock, ClockId } from "@/types";
 import "./App.css";
 
@@ -11,6 +12,7 @@ const CLOCKS: Clock[] = [
   { id: "digital", label: "Digital" },
   { id: "binary", label: "Binary" },
   { id: "bar", label: "Bar" },
+  { id: "bars", label: "Bars" },
 ];
 
 function App() {
@@ -28,6 +30,7 @@ function App() {
         {selectedClockId === "digital" && <DigitalClock />}
         {selectedClockId === "binary" && <BinaryClock />}
         {selectedClockId === "bar" && <BarClock />}
+        {selectedClockId === "bars" && <BarsClock />}
       </section>
 
       <Footer />

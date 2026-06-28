@@ -19,7 +19,7 @@ export function BarClock() {
         aria-valuenow={Math.round(progress)}
         aria-valuemin={0}
         aria-valuemax={100}
-        className="h-5 w-full overflow-hidden rounded-full bg-surface"
+        className="h-5 w-full overflow-hidden rounded-full bg-surface shadow-[inset_2px_2px_5px_#c2c8d2,inset_-1px_-1px_3px_#ffffff] dark:shadow-[inset_2px_2px_5px_#22252c,inset_-1px_-1px_3px_#2e333c]"
       >
         <div
           data-testid="bar-fill"

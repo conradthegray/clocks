@@ -1,4 +1,4 @@
-export type ClockId = "digital" | "binary" | "bar";
+export type ClockId = "digital" | "binary" | "bar" | "bars";
 
 export type Clock = {
   id: ClockId;
