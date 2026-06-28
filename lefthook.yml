@@ -1,0 +1,14 @@
+pre-push:
+  jobs:
+    - name: audit
+      run: npm audit
+    - name: unit tests
+      run: npm test
+
+pre-commit:
+  parallel: true
+  jobs:
+    - name: lint
+      run: npm run lint
+    - name: typecheck
+      run: npm run typecheck
