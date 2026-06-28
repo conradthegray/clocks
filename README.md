@@ -91,5 +91,6 @@ Hooks that run automatically:
 src/
   components/      UI components, each with co-located *.test.tsx files
   hooks/           Reusable hooks (e.g. useTheme)
+  utils/           Pure utility functions (e.g. getCurrentTime, pad)
   test/            Vitest setup
 ```
