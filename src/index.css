@@ -1,0 +1,70 @@
+@import 'tailwindcss';
+
+/* Switch dark mode to a data-attribute strategy driven by the theme toggle */
+@custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
+
+/* Default sans-serif font (powers font-sans + the body default below) */
+@theme {
+  --font-sans:
+    'Montserrat', system-ui, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Raw Nord palette — usable as Tailwind colors (e.g. text-nord8, bg-nord0) */
+@theme {
+  --color-nord0: #2e3440;
+  --color-nord1: #3b4252;
+  --color-nord2: #434c5e;
+  --color-nord3: #4c566a;
+  --color-nord4: #d8dee9;
+  --color-nord5: #e5e9f0;
+  --color-nord6: #eceff4;
+  --color-nord7: #8fbcbb;
+  --color-nord8: #88c0d0;
+  --color-nord9: #81a1c1;
+  --color-nord10: #5e81ac;
+  --color-nord11: #bf616a;
+  --color-nord12: #d08770;
+  --color-nord13: #ebcb8b;
+  --color-nord14: #a3be8c;
+  --color-nord15: #b48ead;
+}
+
+/* Semantic tokens — light theme (Snow Storm) */
+:root,
+[data-theme='light'] {
+  color-scheme: light;
+  --nord-bg: #eceff4; /* nord6 */
+  --nord-surface: #e5e9f0; /* nord5 */
+  --nord-border: #d8dee9; /* nord4 */
+  --nord-text: #2e3440; /* nord0 */
+  --nord-muted: #4c566a; /* nord3 */
+  --nord-accent: #5e81ac; /* nord10 */
+}
+
+/* Semantic tokens — dark theme (Polar Night) */
+[data-theme='dark'] {
+  color-scheme: dark;
+  --nord-bg: #2e3440; /* nord0 */
+  --nord-surface: #3b4252; /* nord1 */
+  --nord-border: #434c5e; /* nord2 */
+  --nord-text: #eceff4; /* nord6 */
+  --nord-muted: #d8dee9; /* nord4 */
+  --nord-accent: #88c0d0; /* nord8 */
+}
+
+/* Expose semantic tokens as utilities: bg-bg, bg-surface, text-fg, etc. */
+@theme inline {
+  --color-bg: var(--nord-bg);
+  --color-surface: var(--nord-surface);
+  --color-border: var(--nord-border);
+  --color-fg: var(--nord-text);
+  --color-muted: var(--nord-muted);
+  --color-accent: var(--nord-accent);
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @apply bg-bg text-fg font-sans;
+}
