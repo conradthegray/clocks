@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { useInterval } from "../../hooks/useInterval";
-import { getCurrentTime } from "../../utils/getCurrentTime";
-import { pad } from "../../utils/pad";
+import { useInterval } from "@/hooks/useInterval";
+import { getCurrentTime } from "@/utils/getCurrentTime";
+import { pad } from "@/utils/pad";
 
 export function DigitalClock() {
   const [now, setNow] = useState(getCurrentTime);

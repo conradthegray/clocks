@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { Header } from "./components/Header";
-import { Footer } from "./components/Footer";
-import { DigitalClock } from "./components/DigitalClock";
-import { BinaryClock } from "./components/BinaryClock";
-import type { Clock, ClockId } from "./types";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { DigitalClock } from "@/components/DigitalClock";
+import { BinaryClock } from "@/components/BinaryClock";
+import type { Clock, ClockId } from "@/types";
 import "./App.css";
 
 const CLOCKS: Clock[] = [

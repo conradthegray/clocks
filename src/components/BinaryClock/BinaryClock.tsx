@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { useInterval } from "../../hooks/useInterval";
-import { getCurrentTime } from "../../utils/getCurrentTime";
-import { pad } from "../../utils/pad";
+import { useInterval } from "@/hooks/useInterval";
+import { getCurrentTime } from "@/utils/getCurrentTime";
+import { pad } from "@/utils/pad";
 
 /** Converts a single decimal digit to a 4-bit binary string, e.g. "5" -> "0101". */
 const toBinary = (digit: string) => Number(digit).toString(2).padStart(4, "0");

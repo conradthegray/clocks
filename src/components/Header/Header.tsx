@@ -1,5 +1,5 @@
-import { useTheme } from "../../hooks/useTheme";
-import type { Clock, ClockId } from "../../types";
+import { useTheme } from "@/hooks/useTheme";
+import type { Clock, ClockId } from "@/types";
 import { Logo } from "./Logo";
 import { ThemeToggle } from "./ThemeToggle";
 
